@@ -131,7 +131,7 @@ int main(void)
 	lcd_stm32_init();
 	lcd_clear(&lcd1);
 	lcd_gotoxy(&lcd1, 0, 0);
-	lcd_puts(&lcd1, "stm32 lcd");
+	lcd_puts(&lcd1, "Smart NFC");
 	char szBuff[100];
   /* USER CODE END 2 */
 
@@ -146,9 +146,8 @@ int main(void)
 		
 		if (status == MI_OK)
 		{
-			sprintf(szBuff, "ID: 0x%02X%02X%02X%02X%02X", serNum[0], serNum[1], serNum[2], serNum[3], serNum[4]);
 			lcd_gotoxy(&lcd1, 0, 1);
-			lcd_puts(&lcd1,szBuff);
+			lcd_puts(&lcd1,"NFC Card Detected");
 		}
 
     /* USER CODE END WHILE */
